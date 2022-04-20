@@ -7,5 +7,7 @@ RSpec.describe Menu, type: :model do
       description: 'Nasi di goreng',
       price: 9000.0
     )
+
+  expect(menu).to be_valid
   end
 end
