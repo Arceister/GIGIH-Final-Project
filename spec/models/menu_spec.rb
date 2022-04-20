@@ -23,5 +23,9 @@ RSpec.describe Menu, type: :model do
       description: 'Nasi di tumis',
       price: 9000.0
     )
+
+    menu2.valid?
+
+    expect(menu2.errors[:name]).to include("has already been taken")
   end
 end
