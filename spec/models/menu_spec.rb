@@ -38,6 +38,6 @@ RSpec.describe Menu, type: :model do
 
     menu.valid?
 
-    expect(menu.errors[:name]).to include("must be greater than 0.01")
+    expect(menu.errors[:price]).to include("must be greater than 0.01")
   end
 end
