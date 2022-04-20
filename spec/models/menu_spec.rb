@@ -35,5 +35,9 @@ RSpec.describe Menu, type: :model do
       description: 'Nasi di goreng',
       price: 0.00
     )
+
+    menu.valid?
+
+    expect(menu.errors[:name]).to include("must be greater than 0.01")
   end
 end
