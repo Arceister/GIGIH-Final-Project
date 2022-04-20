@@ -1,5 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Menu, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it 'is valid with a name and price' do
+    menu = Menu.new(
+      name: 'Nasi Goreng',
+      description: 'Nasi di goreng',
+      price: 9000.0
+    )
+  end
 end
