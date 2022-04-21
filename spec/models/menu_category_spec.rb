@@ -24,5 +24,7 @@ RSpec.describe MenuCategory, type: :model do
       price: 9000.0,
       categories: [c1, c2]
     )
+
+    expect(menu.categories.length).to be > 1
   end
 end
