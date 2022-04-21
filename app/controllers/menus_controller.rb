@@ -19,6 +19,7 @@ class MenusController < ApplicationController
 
   def update
     @menu = Menu.find(params[:id])
+    @menu.update(menu_parameters)
   end
 
   def menu_parameters
