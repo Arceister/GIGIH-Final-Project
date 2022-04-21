@@ -49,5 +49,8 @@ RSpec.describe Menu, type: :model do
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       price: 15000.00
     )
+
+    menu.valid?
+    expect(menu.errors[:description]).to include("is too long (maximum is 150 characters)")
   end
 end
