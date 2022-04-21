@@ -8,7 +8,7 @@ RSpec.describe Menu, type: :model do
       price: 9000.0
     )
 
-  expect(menu).to be_valid
+    expect(menu).to be_valid
   end
 
   it "is invalid with a duplicate name" do
