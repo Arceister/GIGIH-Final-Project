@@ -12,6 +12,12 @@ RSpec.describe MenusController do
           patch :update, params: {id: @menu, menu: attributes_for(:menu)}
           expect(assigns(:menu)).to eq @menu
         end
+
+        it "changes @menu's attributes" do
+          patch :update, params: {id: @menu, menu: attributes_for(:menu, name: 'Nasi Pecel')}
+          @menu.reload
+          expect(@menu.name).to eq('Nasi Pecel')
+        end
       end
     end
   end
