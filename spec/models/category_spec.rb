@@ -5,5 +5,7 @@ RSpec.describe Category, type: :model do
     category = Category.new(
       name: 'Makanan Indonesia'
     )
+
+    expect(category).to be_valid
   end
 end
