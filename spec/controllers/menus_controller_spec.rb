@@ -31,7 +31,9 @@ RSpec.describe MenusController do
     end
 
     describe 'POST #create' do
-      
+      it "saves new menu in database" do
+        
+      end
     end
 
     describe 'PATCH #update' do
