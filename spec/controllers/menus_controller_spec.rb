@@ -17,7 +17,11 @@ RSpec.describe MenusController do
     end
 
     describe 'GET #index' do
-      
+      it "populates array" do
+        nasi_bakar = create(:menu, name: "Nasi Bakar")
+        nasi_megono = create(:menu, name: "Nasi Megono")
+        get :index
+      end
     end
 
     describe 'PATCH #update' do
