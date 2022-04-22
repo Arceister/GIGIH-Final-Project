@@ -3,9 +3,12 @@ require 'rails_helper'
 RSpec.describe MenusController do
   describe MenusController do
     describe 'GET #show' do
-      
+      it "assigns the requested menu to @menu" do
+        menu = create(:menu)
+        get :show, params: {id: menu}
+      end
     end
-    
+
     describe 'PATCH #update' do
       before :each do
         @menu = create(:menu)
