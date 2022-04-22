@@ -16,6 +16,10 @@ RSpec.describe MenusController do
       end
     end
 
+    describe 'GET #index' do
+      
+    end
+
     describe 'PATCH #update' do
       before :each do
         @menu = create(:menu)
