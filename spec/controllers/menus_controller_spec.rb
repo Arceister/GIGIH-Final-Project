@@ -32,7 +32,7 @@ RSpec.describe MenusController do
 
     describe 'POST #create' do
       it "saves new menu in database" do
-        
+        expect{post :create, params: {menu: attributes_for(:menu)}}.to change(Menu, :count).by(1)
       end
     end
 
