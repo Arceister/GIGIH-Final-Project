@@ -8,6 +8,11 @@ RSpec.describe MenusController do
         get :show, params: {id: menu}
         expect(assigns(:menu)).to eq menu
       end
+
+      it "renders :show template" do
+        menu = create(:menu)
+        get :show, params: {id: menu}
+      end
     end
 
     describe 'PATCH #update' do
