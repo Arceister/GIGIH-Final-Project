@@ -23,6 +23,10 @@ RSpec.describe MenusController do
         get :index
         expect(assigns(:menus)).to match_array([nasi_bakar, nasi_megono])
       end
+
+      it "renders :index template" do
+        get :index
+      end
     end
 
     describe 'PATCH #update' do
