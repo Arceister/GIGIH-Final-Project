@@ -18,6 +18,11 @@ RSpec.describe MenusController do
           @menu.reload
           expect(@menu.name).to eq('Nasi Pecel')
         end
+
+        it "redirects to the menu" do
+          patch :update, params: {id: @menu, menu: attributes_for(:menu)}
+          expect(response).to redirect_to menus_path(@menu)
+        end
       end
     end
   end
