@@ -33,6 +33,8 @@ RSpec.describe MenusController do
 
         it "re-renders edit template" do
           patch :update, params: {id: @menu, menu: attributes_for(:menu, name: 'Nasi Jagung', price: 'Test')}
+          expect(assigns(:menu)).to eq @menu
+          expect(response).to have_http_status(302)
         end
       end
     end
