@@ -72,8 +72,12 @@ RSpec.describe MenusController do
         @menu = create(:menu)
       end
 
-      it "deletes the food from the database" do
+      it "deletes the menu from the database" do
         expect{delete :destroy, params: {id: @menu}}.to change(Menu, :count).by(-1)
+      end
+
+      it "redirects to menus#index" do
+        delete :destroy, params: {id: @menu}
       end
     end
   end
