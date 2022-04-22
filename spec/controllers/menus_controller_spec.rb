@@ -6,6 +6,7 @@ RSpec.describe MenusController do
       it "assigns the requested menu to @menu" do
         menu = create(:menu)
         get :show, params: {id: menu}
+        expect(assigns(:menu)).to eq menu
       end
     end
 
