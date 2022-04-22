@@ -24,6 +24,10 @@ RSpec.describe MenusController do
           expect(response).to redirect_to menus_path(@menu)
         end
       end
+
+      context "with invalid attributes" do
+        
+      end
     end
   end
 end
