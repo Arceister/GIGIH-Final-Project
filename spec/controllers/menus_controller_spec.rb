@@ -68,7 +68,13 @@ RSpec.describe MenusController do
     end
 
     describe 'DELETE #destroy' do
-      
+      before :each do
+        @menu = create(:menu)
+      end
+
+      it "deletes the food from the database" do
+        
+      end
     end
   end
 end
