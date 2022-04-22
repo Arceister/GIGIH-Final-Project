@@ -66,5 +66,9 @@ RSpec.describe MenusController do
         end
       end
     end
+
+    describe 'DELETE #destroy' do
+      
+    end
   end
 end
