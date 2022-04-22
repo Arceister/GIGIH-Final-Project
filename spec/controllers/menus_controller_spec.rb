@@ -26,7 +26,9 @@ RSpec.describe MenusController do
       end
 
       context "with invalid attributes" do
-        
+        it 'does not save the updated menu in the database' do
+          patch :update, params: {id: @menu, menu: attributes_for(:menu, name: 'Nasi Jagung', price: 'Test')}
+        end
       end
     end
   end
