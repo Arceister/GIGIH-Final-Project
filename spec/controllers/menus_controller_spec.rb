@@ -2,6 +2,10 @@ require 'rails_helper'
 
 RSpec.describe MenusController do
   describe MenusController do
+    describe 'GET #show' do
+      
+    end
+    
     describe 'PATCH #update' do
       before :each do
         @menu = create(:menu)
