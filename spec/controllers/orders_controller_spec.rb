@@ -5,6 +5,8 @@ RSpec.describe OrdersController do
     it "saves new order in the database" do
       cust = Customer.create(attributes_for(:customer))
       order = Order.create(attributes_for(:order, customer: cust))
+
+      expect{post :create, params: {order: attributes_for(:order, customer: cust)}}.to change(Order, :count).by(1)
     end
   end
 end
