@@ -20,6 +20,8 @@ class MenusController < ApplicationController
   def update
     @menu = Menu.find(params[:id])
     @menu.update(menu_parameters)
+
+    redirect_to menus_path(@menu)
   end
 
   def menu_parameters
