@@ -21,6 +21,7 @@ RSpec.describe MenusController do
         nasi_bakar = create(:menu, name: "Nasi Bakar")
         nasi_megono = create(:menu, name: "Nasi Megono")
         get :index
+        expect(assigns(:menus)).to match_array([nasi_bakar, nasi_megono])
       end
     end
 
