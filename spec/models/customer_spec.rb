@@ -6,6 +6,8 @@ RSpec.describe Customer, type: :model do
   end
 
   it "is invalid without correct email format" do
-    
+    customer = FactoryBot.build(:customer, email: 'iniformatemailgakvalid')
+    customer.valid?
+    expect(customer.errors[:email]).to include("is invalid")
   end
 end
