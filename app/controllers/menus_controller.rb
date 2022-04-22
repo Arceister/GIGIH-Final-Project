@@ -3,6 +3,7 @@ class MenusController < ApplicationController
   end
 
   def show
+    @menu = Menu.find(params[:id])
   end
 
   def new
