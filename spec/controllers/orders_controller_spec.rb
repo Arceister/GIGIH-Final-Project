@@ -26,5 +26,9 @@ RSpec.describe OrdersController do
       @order.reload
       expect(@order.quantity).to eq(5)
     end
+
+    it "redirects to orders" do
+      
+    end
   end
 end
