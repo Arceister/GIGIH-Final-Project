@@ -49,6 +49,8 @@ RSpec.describe OrdersController do
   end
 
   describe 'GET #index' do
-    
+    it "populates array of all orders" do
+      
+    end
   end
 end
