@@ -28,7 +28,8 @@ RSpec.describe OrdersController do
     end
 
     it "redirects to orders" do
-      
+      patch :update, params: {id: @order, order: attributes_for(:order, customer: @cust)}
+      expect(response).to redirect_to orders_path
     end
   end
 end
