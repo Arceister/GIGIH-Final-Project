@@ -1,25 +1,44 @@
-# Rails on Replit
+# GIGIH Final Project
 
-This is a template to get you started with Rails on Replit. It's ready to go so you can just hit run and start coding!
+## Preface
+This is a final project made for Generasi GIGIH Backend Track. I find this final project kinda frustrating because its kinda hard for me (or that's my fault who did this task for only 2/3 days). But i learned much things from this project like how TDD Works, and much more about Rails framework, especially association.
 
-This template was generated using `rails new` (after you install the `rails` gem from the packager sidebar) so you can always do that if you prefer to set it up from scratch. The only had two make config changes we had to make to run it on Replit:
+Okay, i think i'm done with the chit chat. Let's get straight to the problem. So in this documentation, i'd like to explain some thing about this projects. The explanation i want to tell is:<br/>
+- Database Design
+- TDD on this project
+- Library / Dependency used
+- How to run this project
+- Unfinished things (Yes, this project is not 100% finished.)
 
-- bind the app on `0.0.0.0` instead of `localhost` (see `.replit`)
-- allow `*.repl.co` hosts (see `config/environments/development.rb`)
-- allow the app to be iframed on `replit.com` (see `config/application.rb`)
+## Database Design
+![Database Design](assets/Database.png)
 
-## Running the app
+### Before you ask:
+- **Why use Many to Many on Categories?**
+> Because i assume the category is already fixed. My assumption is, the category is already there and we can't make a new category. Therefore, i make it many to many
 
-Simple hit run! You can edit the run command from the `.replit` file.
+- **Do you use nested attribute?**
+> No
 
-## Running commands
+### Database
+Yes, this is my database design. For problem statement 1 until 4 i only use three tables, which are `Menu`, `Category`, and `Menu_Categories`. Then from problem statement 5 until 7, i add the remaining tables which are `Customer`, `Order`, and `Order_Menu`.<br/>
 
-Start every command with `bundle exec` so that it runs in the context of the installed gems environment. The console pane will give you output from the server but you can run arbitrary command from the shell without stopping the server.
+## TDD on This Project
+Yes, for the early problem statement, i used TDD. But i don't have much time to use TDD on all things. So at problem statement 7, i didn't use TDD anymore.<br/>
 
-## Database
+For TDD process, you can take a look at my this project commits. I do **Red - Green** method, but didn't have much time to **Refactor** so i did some **Refactor** at the end.
 
-SQLite would work in development but we don't recommend running it in production. Instead look into using the built-in [Replit database](http://docs.replit.com/misc/database). Otherwise you are welcome to connect databases from your favorite provider. 
+## Library / Dependency Used
+Because there's many **impossible** problem statement, i need some library/dependency to solve them such as:<br/>
+- `email_validator` for validating email (Bonus point in problem statement 5)
+- `whenever` for scheduling daily updates (Bonus point in problem statement 6) (Planned, not implemented yet)
 
-## Help
+## How to Run Rails
+Well, this is step by step how to run this project:<br/>
+1) Run `bundle install` to install the required packages
+2) After the required packages are installed, then run `bin/rails server`
 
-If you need help you might be able to find an answer on our [docs](https://docs.replit.com) page. Alternatively you can [ask in the community](https://replit.com/talk/ask). Feel free to report bugs [here](https://replit.com/bugs) and give us feedback [here](https://Replit/feedback).
+## Uncompleted Things (I'm sorry for this)
+There's many uncompleted things in this project. I know i suck because i can't complete the project on time, but here's the uncompleted things:<br/>
+1) Web UI / API (As far, i only implemented **unit test** and **logic**)
+2) Problem Statement 7 (Daily Report)
