@@ -40,6 +40,11 @@ RSpec.describe OrdersController do
   end
 
   describe 'GET #show' do
-    
+    it "assigns the requested order to @order" do
+      cust = Customer.create(attributes_for(:customer))
+      order = create(:order, customer: cust)
+      get :show, params: {id: cust}
+      expect(assigns(:order)).to eq order 
+    end
   end
 end
