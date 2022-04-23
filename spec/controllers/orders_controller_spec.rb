@@ -33,7 +33,9 @@ RSpec.describe OrdersController do
     end
 
     it "change status to PAID" do
-      
+      patch :update, params: {id: @order, order: attributes_for(:order, customer: @cust, status: 'PAID')}
+      @order.reload
+      expect(@order.status).to eq('PAID')
     end
   end
 end
