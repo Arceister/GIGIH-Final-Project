@@ -20,5 +20,8 @@ RSpec.describe OrdersController do
       patch :update, params: {id: @order, order: attributes_for(:order, customer: @cust)}
       expect(assigns(:order)). to eq @order
     end
+
+    it "changes @order attributes" do
+    end
   end
 end
