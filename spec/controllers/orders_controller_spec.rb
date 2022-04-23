@@ -47,4 +47,8 @@ RSpec.describe OrdersController do
       expect(assigns(:order)).to eq order 
     end
   end
+
+  describe 'GET #index' do
+    
+  end
 end
