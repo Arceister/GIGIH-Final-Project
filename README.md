@@ -37,6 +37,7 @@ Because there's many **impossible** problem statement, i need some library/depen
 Well, this is step by step how to run this project:<br/>
 1) Run `bundle install` to install the required packages
 2) After the required packages are installed, then run `bin/rails server`
+3) **Optional** if you want to run the tests, just run `rspec -fd` in the terminal.
 
 ## Uncompleted Things (I'm sorry for this)
 There's many uncompleted things in this project. I know i suck because i can't complete the project on time, but here's the uncompleted things:<br/>
