@@ -15,6 +15,8 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
     order_params[:customer] = Customer.find(order_params[:customer])
     @order.update(order_params)
+
+    redirect_to orders_path
   end
 
   def create
