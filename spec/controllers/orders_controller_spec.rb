@@ -22,6 +22,9 @@ RSpec.describe OrdersController do
     end
 
     it "changes @order attributes" do
+      patch :update, params: {id: @order, order: attributes_for(:order, customer: @cust, quantity: 5)}
+      @order.reload
+      expect(@order.quantity).to eq(5)
     end
   end
 end
