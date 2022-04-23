@@ -17,7 +17,8 @@ RSpec.describe OrdersController do
     end
 
     it "locates the requested @order" do
-      
+      patch :update, params: {id: @order, order: attributes_for(:order, customer: @cust)}
+      expect(assigns(:order)). to eq @order
     end
   end
 end
