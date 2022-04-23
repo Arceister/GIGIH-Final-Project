@@ -59,4 +59,8 @@ RSpec.describe OrdersController do
       expect(assigns(:orders)).to match_array([order1, order2])
     end
   end
+
+  describe 'GET #report' do
+    
+  end
 end
