@@ -61,6 +61,8 @@ RSpec.describe OrdersController do
   end
 
   describe 'GET #report' do
-    
+    it "should show daily reports" do
+      
+    end
   end
 end
