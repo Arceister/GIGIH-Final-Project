@@ -11,6 +11,13 @@ RSpec.describe OrdersController do
   end
 
   describe 'PATCH #update' do
-    
+    before :each do
+      @cust = Customer.create(attributes_for(:customer))
+      @order = create(:order, customer: @cust)
+    end
+
+    it "locates the requested @order" do
+      
+    end
   end
 end
