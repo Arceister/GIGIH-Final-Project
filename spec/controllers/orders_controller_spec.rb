@@ -9,4 +9,8 @@ RSpec.describe OrdersController do
       expect{post :create, params: {order: attributes_for(:order, customer: cust)}}.to change(Order, :count).by(1)
     end
   end
+
+  describe 'PATCH #update' do
+    
+  end
 end
