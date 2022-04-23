@@ -13,6 +13,8 @@ class OrdersController < ApplicationController
 
   def update
     @order = Order.find(params[:id])
+    order_params[:customer] = Customer.find(order_params[:customer])
+    @order.update(order_params)
   end
 
   def create
