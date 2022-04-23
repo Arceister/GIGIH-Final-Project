@@ -31,5 +31,9 @@ RSpec.describe OrdersController do
       patch :update, params: {id: @order, order: attributes_for(:order, customer: @cust)}
       expect(response).to redirect_to orders_path
     end
+
+    it "change status to PAID" do
+      
+    end
   end
 end
