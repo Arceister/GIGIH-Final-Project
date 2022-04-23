@@ -38,4 +38,8 @@ RSpec.describe OrdersController do
       expect(@order.status).to eq('PAID')
     end
   end
+
+  describe 'GET #show' do
+    
+  end
 end
