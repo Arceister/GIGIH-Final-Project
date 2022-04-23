@@ -50,7 +50,13 @@ RSpec.describe OrdersController do
 
   describe 'GET #index' do
     it "populates array of all orders" do
-      
+      cust = Customer.create(attributes_for(:customer))
+
+      order1 = create(:order, customer: cust, quantity: 2)
+      order2 = create(:order, customer: cust, quantity: 4)
+      get :index
+
+      expect(assigns(:orders)).to match_array([order1, order2])
     end
   end
 end
